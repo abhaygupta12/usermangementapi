@@ -17,7 +17,7 @@ application.use(bodyparser.urlencoded({extended:true}))
 application.use(cors());
 
 application.get("/",(req,res)=>{
-    res.render("<h1>Welcome to Sample App </h1>");
+    res.send("<h1>Welcome to Sample App </h1>");
 })
 
 application.use("/user/api",UserController);
