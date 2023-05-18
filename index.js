@@ -6,11 +6,9 @@ const bodyparser= require('body-parser');
 require('dotenv').config();
 const application= express();
 
-
 // Set up EJS as the view engine
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-
+application.set('view engine', 'ejs');
+application.set('views', path.join(__dirname, 'views'));
 const UserController= require('./controllers/user');
 const port = process.env.PORT || 5000; // When hosting on heroku the port is generally stored as environment varibale..
 application.use(bodyparser.json());
